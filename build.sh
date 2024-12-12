@@ -5,7 +5,7 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 cd $DIR
 
 PRESENTATIONS="presentations"
-PUBLICINDEX="reveal/index.html"
+PUBLICINDEX="index.html"
 
 echo "updating reveal.js..."
 git clone https://github.com/hakimel/reveal.js reveal || true
@@ -21,7 +21,6 @@ rm -frv reveal/.git
 rm -frv reveal/.github
 rn -frv reveal/.gitignore
 ln -srv presentations reveal/presentations
-ln -srv reveal/index.html index.html
 
 echo "creating index file..."
 >$PUBLICINDEX
@@ -35,4 +34,5 @@ for SUBFOLDER in "$PRESENTATIONS"/*/; do
 	fi
 done
 
+ln -srv index.html reveal/index.html
 echo "build successful"
