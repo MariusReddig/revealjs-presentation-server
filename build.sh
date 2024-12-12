@@ -19,7 +19,7 @@ echo "linking dependencies..."
 rm -frv reveal/presentations
 rm -frv reveal/.git
 rm -frv reveal/.github
-rn -frv reveal/.gitignore
+rm -frv reveal/.gitignore
 ln -srv presentations reveal/presentations
 
 echo "creating index file..."
