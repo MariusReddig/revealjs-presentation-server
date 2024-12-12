@@ -18,6 +18,7 @@ popd
 echo "linking dependencies..."
 rm -fv reveal/presentations
 ln -srv presentations reveal/presentations
+ln -srv reveal/index.html index.html
 
 echo "creating index file..."
 >$PUBLICINDEX
