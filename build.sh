@@ -16,7 +16,10 @@ npm install
 popd
 
 echo "linking dependencies..."
-rm -fv reveal/presentations
+rm -frv reveal/presentations
+rm -frv reveal/.git
+rm -frv reveal/.github
+rn -frv reveal/.gitignore
 ln -srv presentations reveal/presentations
 ln -srv reveal/index.html index.html
 
