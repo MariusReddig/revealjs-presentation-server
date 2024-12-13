@@ -1,0 +1,10 @@
+services:
+  web:
+    image: img-static-site-example
+    build: .
+    container_name: my-static-site
+    restart: always
+    ports:
+      - 86:80
+    volumes:
+      - ./:/var/share/nginx/html
